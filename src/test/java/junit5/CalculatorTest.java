@@ -164,21 +164,21 @@ class CalculatorTest {
         }
     }
 
-    @ParameterizedTest(name = "{index} => a={0}, b={1}, sum={2}")
-    @MethodSource("addProvidedData")
-    void addParameterizedTest(int a, int b, int sum) {
-        assertEquals(sum, calculator.add(a, b));
-    }
-
-    private static Stream<Arguments> addProvidedData() {
-        return Stream.of(
-                Arguments.of(6, 2, 8),
-                Arguments.of(-6, -2, -8),
-                Arguments.of(6, -2, 4),
-                Arguments.of(-6, 2, -4),
-                Arguments.of(6, 0, 6)
-        );
-    }
+//    @ParameterizedTest(name = "{index} => a={0}, b={1}, sum={2}")
+//    @MethodSource("addProvidedData")
+//    void addParameterizedTest(int a, int b, int sum) {
+//        assertEquals(sum, calculator.add(a, b));
+//    }
+//
+//    private static Stream<Arguments> addProvidedData() {
+//        return Stream.of(
+//                Arguments.of(6, 2, 8),
+//                Arguments.of(-6, -2, -8),
+//                Arguments.of(6, -2, 4),
+//                Arguments.of(-6, 2, -4),
+//                Arguments.of(6, 0, 6)
+//        );
+//    }
 
     @Test
     void timeOut(){
